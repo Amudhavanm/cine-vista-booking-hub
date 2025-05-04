@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Movie - CineVista Admin</title>
     <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="../styles/admin-dashboard.css">
     <link rel="stylesheet" href="../styles/admin-add-movie.css">
 </head>
 <body>
@@ -18,174 +17,211 @@
             <div class="nav-links">
                 <a href="admin-dashboard.html">Dashboard</a>
                 <a href="admin-add-movie.html" class="active">Add Movie</a>
+                <a href="../index.html">View Site</a>
                 <button id="adminLogoutBtn" class="btn-logout">Logout</button>
             </div>
         </nav>
     </header>
 
-    <main class="admin-container">
-        <div class="admin-sidebar">
-            <ul class="admin-menu">
-                <li><a href="admin-dashboard.html" class="active">Movie Management</a></li>
-                <li><a href="admin-theaters.html">Theater Management</a></li>
-                <li><a href="admin-bookings.html">Bookings</a></li>
-                <li><a href="admin-users.html">Users</a></li>
-                <li><a href="admin-reports.html">Reports</a></li>
-            </ul>
-        </div>
-
-        <div class="admin-content">
-            <div class="admin-header">
-                <h2>Add New Movie</h2>
-                <a href="admin-dashboard.html" class="btn back-btn">Back to Movies</a>
+    <main class="container">
+        <form class="movie-form" id="addMovieForm">
+            <div class="form-section">
+                <h3>Movie Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="movieTitle">Movie Title</label>
+                        <input type="text" id="movieTitle" class="form-control" placeholder="Enter movie title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="movieDuration">Duration (minutes)</label>
+                        <input type="number" id="movieDuration" class="form-control" placeholder="e.g., 120" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="releaseDate">Release Date</label>
+                        <input type="date" id="releaseDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticketPrice">Ticket Price ($)</label>
+                        <input type="number" id="ticketPrice" class="form-control" placeholder="e.g., 12" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="movieDescription">Description</label>
+                    <textarea id="movieDescription" class="form-control" rows="4" placeholder="Enter movie description" required></textarea>
+                </div>
             </div>
             
-            <form id="addMovieForm" class="movie-form">
-                <div class="form-section">
-                    <h3>Basic Information</h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="movieTitle">Movie Title</label>
-                            <input type="text" id="movieTitle" class="form-control" required>
+            <div class="form-section">
+                <h3>Movie Details</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="director">Director</label>
+                        <input type="text" id="director" class="form-control" placeholder="Enter director name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cast">Cast</label>
+                        <input type="text" id="cast" class="form-control" placeholder="Enter cast names (comma separated)" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Genres</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="genre-action" name="genres" value="action">
+                            <label for="genre-action">Action</label>
                         </div>
-                        <div class="form-group">
-                            <label for="movieGenre">Genre</label>
-                            <select id="movieGenre" class="form-control" multiple required>
-                                <option value="action">Action</option>
-                                <option value="adventure">Adventure</option>
-                                <option value="comedy">Comedy</option>
-                                <option value="drama">Drama</option>
-                                <option value="horror">Horror</option>
-                                <option value="romance">Romance</option>
-                                <option value="sci-fi">Sci-Fi</option>
-                                <option value="thriller">Thriller</option>
-                            </select>
-                            <small>Hold Ctrl/Cmd key to select multiple genres</small>
+                        <div>
+                            <input type="checkbox" id="genre-comedy" name="genres" value="comedy">
+                            <label for="genre-comedy">Comedy</label>
                         </div>
-                        <div class="form-group">
-                            <label for="movieDuration">Duration (minutes)</label>
-                            <input type="number" id="movieDuration" class="form-control" min="1" required>
+                        <div>
+                            <input type="checkbox" id="genre-drama" name="genres" value="drama">
+                            <label for="genre-drama">Drama</label>
                         </div>
-                        <div class="form-group">
-                            <label for="movieReleaseDate">Release Date</label>
-                            <input type="date" id="movieReleaseDate" class="form-control" required>
+                        <div>
+                            <input type="checkbox" id="genre-horror" name="genres" value="horror">
+                            <label for="genre-horror">Horror</label>
                         </div>
-                        <div class="form-group">
-                            <label for="movieDirector">Director</label>
-                            <input type="text" id="movieDirector" class="form-control" required>
+                        <div>
+                            <input type="checkbox" id="genre-scifi" name="genres" value="sci-fi">
+                            <label for="genre-scifi">Sci-Fi</label>
                         </div>
-                        <div class="form-group">
-                            <label for="movieCast">Cast</label>
-                            <input type="text" id="movieCast" class="form-control" placeholder="Separate with commas" required>
+                        <div>
+                            <input type="checkbox" id="genre-romance" name="genres" value="romance">
+                            <label for="genre-romance">Romance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="genre-thriller" name="genres" value="thriller">
+                            <label for="genre-thriller">Thriller</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="genre-adventure" name="genres" value="adventure">
+                            <label for="genre-adventure">Adventure</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Theater Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" class="form-control" required>
+                            <option value="">Select State</option>
+                            <option value="california">California</option>
+                            <option value="newyork">New York</option>
+                            <option value="texas">Texas</option>
+                            <option value="florida">Florida</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select id="city" class="form-control" required>
+                            <option value="">Select City</option>
+                            <option value="losangeles">Los Angeles</option>
+                            <option value="sanfrancisco">San Francisco</option>
+                            <option value="newyorkcity">New York City</option>
+                            <option value="houston">Houston</option>
+                            <option value="miami">Miami</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="theaters">Select Theaters</label>
+                    <select id="theaters" class="form-control" multiple required>
+                        <option value="amc">AMC Theaters - Downtown</option>
+                        <option value="regal">Regal Cinemas - Westside</option>
+                        <option value="cinemark">Cinemark - Eastside</option>
+                        <option value="broadway">Broadway Cinemas</option>
+                        <option value="premiere">Premiere Cinema</option>
+                    </select>
+                    <small>Hold Ctrl (or Cmd) to select multiple theaters</small>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Showtimes</h3>
+                <div class="form-group">
+                    <label>Available Times</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="time-10am" name="times" value="10:00 AM">
+                            <label for="time-10am">10:00 AM</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="time-1pm" name="times" value="1:00 PM">
+                            <label for="time-1pm">1:00 PM</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="time-4pm" name="times" value="4:00 PM">
+                            <label for="time-4pm">4:00 PM</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="time-7pm" name="times" value="7:00 PM">
+                            <label for="time-7pm">7:00 PM</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="time-10pm" name="times" value="10:00 PM">
+                            <label for="time-10pm">10:00 PM</label>
                         </div>
                     </div>
                 </div>
                 
-                <div class="form-section">
-                    <h3>Movie Details</h3>
-                    <div class="form-group">
-                        <label for="movieDescription">Description</label>
-                        <textarea id="movieDescription" class="form-control" rows="4" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="moviePoster">Movie Poster URL</label>
-                        <input type="url" id="moviePoster" class="form-control" placeholder="https://example.com/image.jpg" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="movieTrailer">Trailer URL</label>
-                        <input type="url" id="movieTrailer" class="form-control" placeholder="https://youtube.com/watch?v=xyz">
-                    </div>
+                <div class="form-group">
+                    <label for="moviePoster">Movie Poster URL</label>
+                    <input type="url" id="moviePoster" class="form-control" placeholder="Enter image URL" required>
+                    <small>Enter a URL to the movie poster image (e.g., https://example.com/image.jpg)</small>
                 </div>
-                
-                <div class="form-section">
-                    <h3>Ticket & Show Information</h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="ticketPrice">Ticket Price ($)</label>
-                            <input type="number" id="ticketPrice" class="form-control" step="0.01" min="0" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Available Show Times</label>
-                            <div class="checkbox-group">
-                                <div>
-                                    <input type="checkbox" id="time1" name="showtime" value="10:00 AM">
-                                    <label for="time1">10:00 AM</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="time2" name="showtime" value="1:30 PM">
-                                    <label for="time2">1:30 PM</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="time3" name="showtime" value="4:45 PM">
-                                    <label for="time3">4:45 PM</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="time4" name="showtime" value="7:15 PM">
-                                    <label for="time4">7:15 PM</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="time5" name="showtime" value="10:00 PM">
-                                    <label for="time5">10:00 PM</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <h3>Theater Information</h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <select id="state" class="form-control" required>
-                                <option value="">Select State</option>
-                                <option value="california">California</option>
-                                <option value="newyork">New York</option>
-                                <option value="texas">Texas</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <select id="city" class="form-control" required>
-                                <option value="">Select City</option>
-                                <option value="losangeles">Los Angeles</option>
-                                <option value="newyorkcity">New York City</option>
-                                <option value="houston">Houston</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Available Theaters</label>
-                        <div class="checkbox-group">
-                            <div>
-                                <input type="checkbox" id="theater1" name="theater" value="AMC Theaters">
-                                <label for="theater1">AMC Theaters</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="theater2" name="theater" value="Regal Cinemas">
-                                <label for="theater2">Regal Cinemas</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="theater3" name="theater" value="Cinemark">
-                                <label for="theater3">Cinemark</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="theater4" name="theater" value="Landmark Theatres">
-                                <label for="theater4">Landmark Theatres</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-actions">
-                    <button type="reset" class="btn reset-btn">Reset</button>
-                    <button type="submit" class="btn submit-btn">Add Movie</button>
-                </div>
-            </form>
-        </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn back-btn" onclick="window.location.href='admin-dashboard.html'">Back to Dashboard</button>
+                <button type="reset" class="btn reset-btn">Reset Form</button>
+                <button type="submit" class="btn submit-btn">Add Movie</button>
+            </div>
+        </form>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About CineVista</h3>
+                <p>Your one-stop destination for booking movie tickets online. Enjoy the latest movies in theaters near you!</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@cinevista.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineVista. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="../js/admin-auth.js"></script>
-    <script src="../js/admin-add-movie.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('addMovieForm');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real app, this would send data to a server
+                    // For demo, just show an alert and redirect
+                    alert('Movie added successfully!');
+                    window.location.href = 'admin-dashboard.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

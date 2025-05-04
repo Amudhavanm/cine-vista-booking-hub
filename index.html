@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineVista - Book Movie Tickets</title>
-    <link rel="stylesheet" href="styles/home.css">
+    <title>CineVista - Book Movie Tickets Online</title>
     <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <header>
@@ -24,65 +24,71 @@
         </nav>
     </header>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 1">
+                <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Featured Movie 1">
                 <div class="carousel-caption">
-                    <h2>Trending: Cosmic Adventure</h2>
-                    <p>An epic journey through time and space</p>
+                    <h2>Eternal Sunshine</h2>
+                    <p>A heartbroken man undergoes a procedure to erase memories of his ex-girlfriend, only to discover too late that he still loves her.</p>
+                    <a href="pages/movie-details.html?id=1" class="btn">Book Now</a>
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 2">
+                <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Featured Movie 2">
                 <div class="carousel-caption">
-                    <h2>Trending: Crime City</h2>
-                    <p>A detective story that will keep you on the edge</p>
+                    <h2>The Dark Knight</h2>
+                    <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest tests of his ability to fight injustice.</p>
+                    <a href="pages/movie-details.html?id=2" class="btn">Book Now</a>
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 3">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Featured Movie 3">
                 <div class="carousel-caption">
-                    <h2>Trending: Love in Paris</h2>
-                    <p>A romantic comedy about finding love</p>
+                    <h2>Detective Chronicles</h2>
+                    <p>A brilliant detective follows a trail of clues to solve the most challenging case of his career.</p>
+                    <a href="pages/movie-details.html?id=5" class="btn">Book Now</a>
                 </div>
             </div>
         </div>
-        <button class="carousel-button prev">&#10094;</button>
-        <button class="carousel-button next">&#10095;</button>
-    </section>
+        <button class="carousel-button prev">&lt;</button>
+        <button class="carousel-button next">&gt;</button>
+    </div>
 
     <main class="container">
         <div class="content">
-            <section class="recently-released">
+            <div class="recently-released">
                 <h2>Recently Released Movies</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
                         <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 1">
                         <h3>Eternal Sunshine</h3>
-                        <p>Drama | 2h 15m</p>
+                        <p>Drama | Romance</p>
                         <a href="pages/movie-details.html?id=1" class="btn">Book Now</a>
                     </div>
+                    
                     <div class="movie-card">
                         <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 2">
                         <h3>The Dark Knight</h3>
-                        <p>Action | 2h 32m</p>
+                        <p>Action | Crime</p>
                         <a href="pages/movie-details.html?id=2" class="btn">Book Now</a>
                     </div>
+                    
                     <div class="movie-card">
                         <img src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 3">
                         <h3>Ocean's Wave</h3>
-                        <p>Adventure | 1h 55m</p>
+                        <p>Adventure | Family</p>
                         <a href="pages/movie-details.html?id=3" class="btn">Book Now</a>
                     </div>
+                    
                     <div class="movie-card">
                         <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 4">
                         <h3>City Lights</h3>
-                        <p>Comedy | 1h 45m</p>
+                        <p>Comedy | Romance</p>
                         <a href="pages/movie-details.html?id=4" class="btn">Book Now</a>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
         
         <aside class="location-sidebar">
@@ -134,7 +140,7 @@
         </div>
     </footer>
 
-    <script src="js/carousel.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
