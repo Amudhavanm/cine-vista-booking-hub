@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - CineVista</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/movie-details.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CineVista</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="login.html" id="loginLink">Login</a>
+                <a href="signup.html" id="signupLink">Signup</a>
+                <a href="profile.html" id="profileLink" style="display: none;">Profile</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container movie-details-container">
+        <div class="movie-info-section">
+            <div class="movie-poster">
+                <img id="movie-poster" src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie Poster">
+            </div>
+            <div class="movie-info">
+                <h1 id="movie-title">Eternal Sunshine</h1>
+                <div class="movie-meta">
+                    <span class="genre">Drama | Romance</span>
+                    <span class="duration">2h 15m</span>
+                    <span class="rating">★★★★☆ 4.2/5</span>
+                </div>
+                <div class="movie-description">
+                    <h3>Synopsis</h3>
+                    <p>A heartbroken man signs up for a procedure to erase memories of his ex-girlfriend, only to discover during the process that he doesn't want to forget her after all. As his memories fade, he struggles to retain his love for her.</p>
+                </div>
+                <div class="movie-cast">
+                    <h3>Cast</h3>
+                    <p>Jim Carrey, Kate Winslet, Kirsten Dunst, Mark Ruffalo</p>
+                </div>
+                <div class="movie-director">
+                    <h3>Director</h3>
+                    <p>Michel Gondry</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-section" id="booking-section">
+            <h2>Book Your Tickets</h2>
+            
+            <div class="booking-step" id="date-time-selection">
+                <h3>Select Date & Time</h3>
+                <div class="date-selection">
+                    <button class="date-btn active">Today</button>
+                    <button class="date-btn">Tomorrow</button>
+                    <button class="date-btn">Fri, May 5</button>
+                    <button class="date-btn">Sat, May 6</button>
+                    <button class="date-btn">Sun, May 7</button>
+                </div>
+                <div class="time-selection">
+                    <button class="time-btn">10:00 AM</button>
+                    <button class="time-btn">1:30 PM</button>
+                    <button class="time-btn active">4:45 PM</button>
+                    <button class="time-btn">7:15 PM</button>
+                    <button class="time-btn">10:00 PM</button>
+                </div>
+            </div>
+
+            <div class="booking-step" id="seat-selection">
+                <h3>Select Seats</h3>
+                <div class="screen">Screen</div>
+                <div class="seat-info">
+                    <div class="seat-type">
+                        <span class="seat available"></span>
+                        <span>Available</span>
+                    </div>
+                    <div class="seat-type">
+                        <span class="seat selected"></span>
+                        <span>Selected</span>
+                    </div>
+                    <div class="seat-type">
+                        <span class="seat booked"></span>
+                        <span>Booked</span>
+                    </div>
+                </div>
+                <div class="seating-layout">
+                    <div class="row">
+                        <span class="row-label">A</span>
+                        <div class="seat available" data-seat="A1"></div>
+                        <div class="seat available" data-seat="A2"></div>
+                        <div class="seat booked" data-seat="A3"></div>
+                        <div class="seat booked" data-seat="A4"></div>
+                        <div class="seat available" data-seat="A5"></div>
+                        <div class="seat available" data-seat="A6"></div>
+                        <div class="seat available" data-seat="A7"></div>
+                        <div class="seat available" data-seat="A8"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-label">B</span>
+                        <div class="seat available" data-seat="B1"></div>
+                        <div class="seat available" data-seat="B2"></div>
+                        <div class="seat available" data-seat="B3"></div>
+                        <div class="seat available" data-seat="B4"></div>
+                        <div class="seat booked" data-seat="B5"></div>
+                        <div class="seat booked" data-seat="B6"></div>
+                        <div class="seat available" data-seat="B7"></div>
+                        <div class="seat available" data-seat="B8"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-label">C</span>
+                        <div class="seat available" data-seat="C1"></div>
+                        <div class="seat available" data-seat="C2"></div>
+                        <div class="seat booked" data-seat="C3"></div>
+                        <div class="seat booked" data-seat="C4"></div>
+                        <div class="seat booked" data-seat="C5"></div>
+                        <div class="seat available" data-seat="C6"></div>
+                        <div class="seat available" data-seat="C7"></div>
+                        <div class="seat available" data-seat="C8"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-label">D</span>
+                        <div class="seat available" data-seat="D1"></div>
+                        <div class="seat available" data-seat="D2"></div>
+                        <div class="seat available" data-seat="D3"></div>
+                        <div class="seat available" data-seat="D4"></div>
+                        <div class="seat available" data-seat="D5"></div>
+                        <div class="seat available" data-seat="D6"></div>
+                        <div class="seat available" data-seat="D7"></div>
+                        <div class="seat available" data-seat="D8"></div>
+                    </div>
+                    <div class="row">
+                        <span class="row-label">E</span>
+                        <div class="seat available" data-seat="E1"></div>
+                        <div class="seat available" data-seat="E2"></div>
+                        <div class="seat available" data-seat="E3"></div>
+                        <div class="seat available" data-seat="E4"></div>
+                        <div class="seat available" data-seat="E5"></div>
+                        <div class="seat available" data-seat="E6"></div>
+                        <div class="seat available" data-seat="E7"></div>
+                        <div class="seat available" data-seat="E8"></div>
+                    </div>
+                </div>
+                <div class="booking-summary">
+                    <div class="ticket-details">
+                        <span>Regular Seats: <span id="selected-count">0</span></span>
+                        <span>Price: $<span id="ticket-price">12</span> per ticket</span>
+                        <span>Total: $<span id="total-price">0</span></span>
+                    </div>
+                    <button class="btn" id="proceed-to-payment">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About CineVista</h3>
+                <p>Your one-stop destination for booking movie tickets online. Enjoy the latest movies in theaters near you!</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@cinevista.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineVista. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/movie-details.js"></script>
+</body>
+</html>

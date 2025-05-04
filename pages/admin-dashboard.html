@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CineVista</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CineVista Admin</h1>
+            </div>
+            <div class="nav-links">
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="admin-add-movie.html">Add Movie</a>
+                <button id="adminLogoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <div class="admin-sidebar">
+            <ul class="admin-menu">
+                <li><a href="admin-dashboard.html" class="active">Movie Management</a></li>
+                <li><a href="admin-theaters.html">Theater Management</a></li>
+                <li><a href="admin-bookings.html">Bookings</a></li>
+                <li><a href="admin-users.html">Users</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+            </ul>
+        </div>
+
+        <div class="admin-content">
+            <div class="admin-header">
+                <h2>Movie Management</h2>
+                <a href="admin-add-movie.html" class="btn add-btn">Add New Movie</a>
+            </div>
+
+            <div class="search-filter">
+                <input type="text" id="searchMovie" class="search-input" placeholder="Search movies...">
+                <select id="statusFilter" class="filter-select">
+                    <option value="all">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="expired">Expired</option>
+                </select>
+            </div>
+
+            <div class="table-responsive">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Movie ID</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Duration</th>
+                            <th>Release Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Eternal Sunshine</td>
+                            <td>Drama, Romance</td>
+                            <td>2h 15m</td>
+                            <td>Apr 15, 2025</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="actions">
+                                <a href="admin-edit-movie.html?id=1" class="btn-sm edit">Edit</a>
+                                <button class="btn-sm delete">Delete</button>
+                                <a href="admin-movie-details.html?id=1" class="btn-sm view">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime</td>
+                            <td>2h 32m</td>
+                            <td>Apr 10, 2025</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="actions">
+                                <a href="admin-edit-movie.html?id=2" class="btn-sm edit">Edit</a>
+                                <button class="btn-sm delete">Delete</button>
+                                <a href="admin-movie-details.html?id=2" class="btn-sm view">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ocean's Wave</td>
+                            <td>Adventure, Family</td>
+                            <td>1h 55m</td>
+                            <td>Apr 20, 2025</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="actions">
+                                <a href="admin-edit-movie.html?id=3" class="btn-sm edit">Edit</a>
+                                <button class="btn-sm delete">Delete</button>
+                                <a href="admin-movie-details.html?id=3" class="btn-sm view">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>City Lights</td>
+                            <td>Comedy, Romance</td>
+                            <td>1h 45m</td>
+                            <td>Apr 25, 2025</td>
+                            <td><span class="status active">Active</span></td>
+                            <td class="actions">
+                                <a href="admin-edit-movie.html?id=4" class="btn-sm edit">Edit</a>
+                                <button class="btn-sm delete">Delete</button>
+                                <a href="admin-movie-details.html?id=4" class="btn-sm view">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Summer Love</td>
+                            <td>Romance, Drama</td>
+                            <td>2h 05m</td>
+                            <td>May 15, 2025</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                            <td class="actions">
+                                <a href="admin-edit-movie.html?id=5" class="btn-sm edit">Edit</a>
+                                <button class="btn-sm delete">Delete</button>
+                                <a href="admin-movie-details.html?id=5" class="btn-sm view">View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn">Previous</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/admin-auth.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,26 +1,140 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cine-vista-booking-hub</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVista - Book Movie Tickets</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/common.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CineVista</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/movies.html">Movies</a>
+                <a href="pages/login.html" id="loginLink">Login</a>
+                <a href="pages/signup.html" id="signupLink">Signup</a>
+                <a href="pages/profile.html" id="profileLink" style="display: none;">Profile</a>
+            </div>
+        </nav>
+    </header>
 
-    <meta property="og:title" content="cine-vista-booking-hub" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 1">
+                <div class="carousel-caption">
+                    <h2>Trending: Cosmic Adventure</h2>
+                    <p>An epic journey through time and space</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 2">
+                <div class="carousel-caption">
+                    <h2>Trending: Crime City</h2>
+                    <p>A detective story that will keep you on the edge</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Movie 3">
+                <div class="carousel-caption">
+                    <h2>Trending: Love in Paris</h2>
+                    <p>A romantic comedy about finding love</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <main class="container">
+        <div class="content">
+            <section class="recently-released">
+                <h2>Recently Released Movies</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 1">
+                        <h3>Eternal Sunshine</h3>
+                        <p>Drama | 2h 15m</p>
+                        <a href="pages/movie-details.html?id=1" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 2">
+                        <h3>The Dark Knight</h3>
+                        <p>Action | 2h 32m</p>
+                        <a href="pages/movie-details.html?id=2" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 3">
+                        <h3>Ocean's Wave</h3>
+                        <p>Adventure | 1h 55m</p>
+                        <a href="pages/movie-details.html?id=3" class="btn">Book Now</a>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Movie 4">
+                        <h3>City Lights</h3>
+                        <p>Comedy | 1h 45m</p>
+                        <a href="pages/movie-details.html?id=4" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <aside class="location-sidebar">
+            <h3>Select Location</h3>
+            <div class="location-filters">
+                <select id="state">
+                    <option value="">Select State</option>
+                    <option value="california">California</option>
+                    <option value="newyork">New York</option>
+                    <option value="texas">Texas</option>
+                </select>
+                <select id="city">
+                    <option value="">Select City</option>
+                    <option value="losangeles">Los Angeles</option>
+                    <option value="newyorkcity">New York City</option>
+                    <option value="houston">Houston</option>
+                </select>
+                <select id="theater">
+                    <option value="">Select Theater</option>
+                    <option value="amc">AMC Theaters</option>
+                    <option value="regal">Regal Cinemas</option>
+                    <option value="cinemark">Cinemark</option>
+                </select>
+                <button class="btn filter-btn">Apply Filters</button>
+            </div>
+        </aside>
+    </main>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About CineVista</h3>
+                <p>Your one-stop destination for booking movie tickets online. Enjoy the latest movies in theaters near you!</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@cinevista.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <a href="pages/about.html">About Us</a>
+                <a href="pages/terms.html">Terms & Conditions</a>
+                <a href="pages/privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineVista. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/auth.js"></script>
+</body>
 </html>

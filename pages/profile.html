@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CineVista</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CineVista</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="profile.html" class="active">Profile</a>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container profile-container">
+        <div class="profile-header">
+            <h2>My Profile</h2>
+            <p>Manage your account information and view your booking history</p>
+        </div>
+        
+        <div class="profile-sections">
+            <section class="user-info">
+                <h3>Personal Information</h3>
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="form-control" value="JohnDoe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" value="johndoe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" value="123-456-7890" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn update-btn">Update Information</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="change-password">
+                <h3>Change Password</h3>
+                <form id="passwordForm">
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <input type="password" id="confirmPassword" class="form-control" required>
+                    </div>
+                    <div id="password-error" class="error-message"></div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn update-btn">Update Password</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+        <section class="booking-history">
+            <h3>Booking History</h3>
+            <div class="bookings-list">
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <h4>Eternal Sunshine</h4>
+                        <span class="booking-date">May 4, 2025</span>
+                    </div>
+                    <div class="booking-details">
+                        <p><strong>Time:</strong> 4:45 PM</p>
+                        <p><strong>Theater:</strong> AMC Theaters - Downtown</p>
+                        <p><strong>Seats:</strong> B3, B4</p>
+                        <p><strong>Total Amount:</strong> $26.00</p>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn view-ticket-btn">View E-Ticket</button>
+                    </div>
+                </div>
+                
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <h4>The Dark Knight</h4>
+                        <span class="booking-date">April 28, 2025</span>
+                    </div>
+                    <div class="booking-details">
+                        <p><strong>Time:</strong> 7:15 PM</p>
+                        <p><strong>Theater:</strong> Regal Cinemas - Westside</p>
+                        <p><strong>Seats:</strong> C5, C6, C7</p>
+                        <p><strong>Total Amount:</strong> $39.00</p>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn view-ticket-btn">View E-Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About CineVista</h3>
+                <p>Your one-stop destination for booking movie tickets online. Enjoy the latest movies in theaters near you!</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@cinevista.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CineVista. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+/* Profile Page Specific Styles */
+.profile-container {
+    max-width: 1000px;
+    flex-direction: column;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-header h2 {
+    color: #1d3557;
+    margin-bottom: 10px;
+}
+
+.profile-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.user-info, .change-password {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.user-info h3, .change-password h3, .booking-history h3 {
+    color: #1d3557;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-actions {
+    margin-top: 25px;
+}
+
+.update-btn {
+    width: 100%;
+    background-color: #1d3557;
+}
+
+.update-btn:hover {
+    background-color: #2a4d69;
+}
+
+.btn-logout {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background: #c1121f;
+}
+
+/* Booking History Styles */
+.booking-history {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+.booking-header h4 {
+    margin: 0;
+    color: #1d3557;
+}
+
+.booking-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.booking-details {
+    padding: 15px;
+}
+
+.booking-details p {
+    margin-bottom: 8px;
+}
+
+.booking-actions {
+    padding: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view-ticket-btn {
+    background-color: #457b9d;
+}
+
+.view-ticket-btn:hover {
+    background-color: #2a6f97;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-sections {
+        grid-template-columns: 1fr;
+    }
+}

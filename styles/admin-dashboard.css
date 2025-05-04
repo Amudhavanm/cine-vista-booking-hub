@@ -1,0 +1,261 @@
+
+/* Admin Dashboard Page Specific Styles */
+body {
+    background-color: #f5f7fb;
+}
+
+.navbar {
+    padding: 12px 30px;
+}
+
+.btn-logout {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background: #c1121f;
+}
+
+.admin-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px 0;
+}
+
+.admin-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-menu li {
+    margin-bottom: 5px;
+}
+
+.admin-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.admin-menu a:hover, .admin-menu a.active {
+    background-color: #1d3557;
+    color: white;
+}
+
+.admin-content {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-header h2 {
+    margin: 0;
+    color: #1d3557;
+}
+
+.add-btn {
+    background-color: #2ecc71;
+}
+
+.add-btn:hover {
+    background-color: #27ae60;
+}
+
+.search-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #f5f7fb;
+    font-weight: 600;
+    color: #1d3557;
+}
+
+.admin-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.active {
+    background-color: #d1f7dd;
+    color: #25a244;
+}
+
+.status.upcoming {
+    background-color: #d1e7ff;
+    color: #0366d6;
+}
+
+.status.expired {
+    background-color: #ffd1d1;
+    color: #d60303;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-sm.edit {
+    background-color: #3498db;
+}
+
+.btn-sm.delete {
+    background-color: #e74c3c;
+    border: none;
+}
+
+.btn-sm.view {
+    background-color: #1d3557;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.pagination-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination-btn.active {
+    background: #1d3557;
+    color: white;
+    border-color: #1d3557;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .admin-container {
+        flex-direction: column;
+    }
+    
+    .admin-sidebar {
+        width: 100%;
+    }
+    
+    .admin-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .admin-menu li {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    
+    .admin-menu a {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .search-filter {
+        flex-direction: column;
+    }
+    
+    .admin-menu {
+        flex-direction: column;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-sm {
+        text-align: center;
+    }
+}
